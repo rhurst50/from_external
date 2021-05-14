@@ -1,0 +1,53 @@
+RUNREPORT: minion1
+
+ID: eski_vhosts
+SLS: apache.vhosts
+Comment:  Configuration is up to date.
+
+ID: apache_config_file
+SLS: apache.config
+Comment:  File /etc/apache2/apache2.conf is in the correct state
+
+SLS: apache.restart
+Comment:  State was not run because none of the onchanges reqs changed
+
+ID: apache_install
+SLS: apache.install
+Comment:  All specified packages are already installed
+
+ID: mod_curl
+SLS: php.mod-curl
+Comment:  All specified packages are already installed
+
+ID: mod_gd
+SLS: php.mod-gd
+Comment:  All specified packages are already installed
+
+ID: mod_mbstring
+SLS: php.mod-mbstring
+Comment:  All specified packages are already installed
+
+ID: mod_mysql
+SLS: php.mod-mysql
+Comment:  All specified packages are already installed
+
+ID: mod_xml
+SLS: php.mod-xml
+Comment:  All specified packages are already installed
+
+ID: mod_xmlrpc
+SLS: php.mod-xmlrpc
+Comment:  All specified packages are already installed
+
+ID: php_install
+SLS: php
+Comment:  All specified packages are already installed
+
+ID: server_install_mysql
+SLS: mysql
+Comment:  All specified packages are already installed
+
+ID: server_install_mysql
+SLS: mysql
+Comment:  The service mysql is already running
+
