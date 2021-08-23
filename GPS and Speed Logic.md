@@ -148,9 +148,9 @@ For example if evaluating a delta such as Speed 1 vs. Speed 2 to determine if a 
 >>SPD_DELTA_MAX = 4
 
 >>def myfunc()
-  SPEED_DIFF = SPD_1 - SPD_2
-  ABS_SPEED_DIFF = abs(SPEED_DIFF)
-  if ABS_SPEED_DIFF >= SPD_DELTA_MAX
+  >>SPEED_DIFF = SPD_1 - SPD_2
+  >>ABS_SPEED_DIFF = abs(SPEED_DIFF)
+  >>if ABS_SPEED_DIFF >= SPD_DELTA_MAX
     print("SPEED SOURCES DELTA TOO HIGH")
   else:
     print("SPEED SOURCES WITHIN TOLORANCE")
@@ -266,7 +266,6 @@ This column is used to determine if a delta exists between GPS 1 and GPS 2 FFPS 
 >>=IF(U2>4,"GPS_V_DEFECT","OK")
 
 - if the delta between GPS1 and GPS2 FPS values > 4, then "GPS_V_DEFECT", else "OK"
-  - The returned value will be used by other defect logic detection cells. If there is no defect between these two GPS FPS values and a delta is found against WT1 and ILC
-  If there is no defect between these two values and WT1 and ILC FPS defects are detected by other cells, then we will compare both WT1/ILC speed values to the average of the GPS1 and GPS2 FPS values to
-  determine which WT1 or ILC PFS is faulty. If a delta is detected between GPS1 and GPS2 FPS values and there is not a WT1/ILC FPS values both GPS1 and GPS2 FPS values will be compared to the average of
-  WT1 and ILC FPS values to determine which GPS input is faulty.
+  - The returned value will be used by other defect logic detection cells. If there is no defect between these two GPS FPS values and WT1 and ILC FPS defects are detected by other cells, then we will compare both
+  WT1/ILC speed values to the average of the GPS1 and GPS2 FPS values to determine which WT1 or ILC PFS is faulty. If a delta is detected between GPS1 and GPS2 FPS values and there is not a WT1/ILC FPS
+  values both GPS1 and GPS2 FPS values will be compared to the average of WT1 and ILC FPS values to determine which GPS input is faulty.
